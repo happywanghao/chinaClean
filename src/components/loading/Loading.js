@@ -4,7 +4,7 @@ class Loading extends React.Component{
   render(){
     return (
       <div style={{width:'100%',height:'100%',display:'flex',alignItems:'center',justifyContent:'center'}}>
-				<Spin tip="Loading..." size="large">
+				<Spin tip="Loading..." size={ this.props.size ? this.props.size : "large"}>
 			  </Spin>
       </div>
     )

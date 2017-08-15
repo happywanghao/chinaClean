@@ -32,6 +32,7 @@
   height: 50px;
   background-repeat: repeat-x;
   background-size: auto 100%;
+  flex-shrink:0;
 }
 .footer .menus {
   display: flex;

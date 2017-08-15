@@ -1,11 +1,138 @@
-.home .ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 160px;
-  background: #364d79;
-  overflow: hidden;
+.home{
+  background-color: #E2E3E5;
 }
+.home .banner{
+  width: 6.4rem;
+  height: 2.5rem;
+}
+.home .banner img{
+  width: 6.4rem;
+  height: 2.5rem;
+}
+.home .channels{
+    border-top: 1px solid #E2E3E5;
+    border-bottom: 1px solid #e2e3e5;
+  }
+.home .channels > ul {
+    height: 3rem;
+    background-color: #FFFFFF;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-content:space-around;
+  }
+.home .channels > ul > li {
+    width: 1.6rem;
+    height: 1.2rem;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 0.9rem 0.9rem;
+  }
+.home .channels > ul > li > span {
+    display: block;
+    margin-top: 0.94rem;
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+  }
+.home .hots {
+    margin-top: 1px;
+    padding: 0.15rem 0px;
+    background-color: #FFFFFF;
+  }
 
-.home .ant-carousel .slick-slide h3 {
-  color: #fff;
-}
+.home .hots > .caption {
+    width: 1.35rem;
+    height: 0.9rem;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-right: 1px solid #E2E3E5;
+    box-sizing: border-box;
+    float: left;
+  }
+
+.home .hots > .ant-carousel {
+    width: 4.8rem;
+    height: 0.9rem;
+    float: left;
+  }
+
+.home .hots .slick-slide {
+    padding-left: 0.45rem;
+    font-size: 0.26rem;
+    line-height: 0.45rem;
+    background-repeat: no-repeat;
+    background-position: 0.1rem center;
+    background-size: auto 60%;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+  }
+.home .leases,
+.home .recommends {
+    margin-top: 0.04rem;
+    padding: 0.05rem 0.1rem;
+    background-color: #FFFFFF;
+  }
+
+.home .leases > .caption,
+.home .recommends > .caption {
+    height: 0.6rem;
+    background-repeat: no-repeat;
+    background-position: 0.24rem center;
+    background-size: auto 50%;
+    border-bottom: 1px solid #E2E3E5;
+  }
+
+.home .leases > .caption > span,
+.home .recommends > .caption > span {
+    margin-right: 0.48rem;
+    font-size: 0.24rem;
+    line-height: 0.6rem;
+    float: right;
+  }
+
+.home .leases > ul,
+  .recommends > ul {
+    overflow: hidden;
+    padding-bottom: 0.1rem;
+  }
+
+.home .leases > ul > li {
+    width: 25%;
+    font-size: 0.26rem;
+    float: left;
+  }
+
+.home .leases > ul > li > .thumb {
+    width: 1.35rem;
+    margin: 0.05rem auto;
+  }
+.home .leases > ul > li > .thumb img{
+    display: block;
+    width: 100%;
+  }
+
+.home .leases > ul > li > .title {
+    height: 0.4rem;
+    font-size: 0.26rem;
+    line-height: 0.4rem;
+    text-align: center;
+    overflow: hidden;
+  }
+.home .recommends > ul > li {
+    width: 1.92rem;
+    height: 1.4rem;
+    margin-top: 0.13rem;
+    margin-left: 0.11rem;
+    font-size: 0.26rem;
+    float: left;
+  }
+.home .recommends > ul > li > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }

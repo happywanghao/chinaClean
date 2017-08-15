@@ -1,5 +1,6 @@
 import React from 'react'
-import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+// import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 import {connect} from 'react-redux';
 import {getInitializationData} from './redux/actions/actions.js'
 import Loading from './components/loading/Loading.js'
@@ -16,7 +17,7 @@ class App extends React.Component{
 	}
 	render(){
 		return(
-			this.props.initializationDate?
+			this.props.initializationData?
 			<Router>
 					<div id="app">
 						<Header/>

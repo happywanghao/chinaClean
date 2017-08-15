@@ -4,6 +4,7 @@
    height: 45px;
    display: flex;
    justify-content:space-between;
+   flex-shrink:0;
  }
 .header .logo {
    width:2.1rem;

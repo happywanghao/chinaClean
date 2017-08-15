@@ -19,3 +19,6 @@ li{
 #app .main{
 	flex-grow: 1;
 }
+.main{
+	overflow: auto;
+}
