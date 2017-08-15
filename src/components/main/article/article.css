@@ -1,0 +1,12 @@
+.article{
+  width: 100%;
+  padding: 0.2rem 0.2rem 0 0.2rem;
+  box-sizing: border-box;
+}
+.article img{
+  width: 100%;
+}
+.article h1{
+  font-weight: bold;
+  text-align: center;
+}

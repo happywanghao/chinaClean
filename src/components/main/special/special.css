@@ -1,0 +1,95 @@
+.warpper {
+  width: 6.4rem;
+}
+.banner {
+  height: 2.5rem;
+}
+.banner img{
+  display: block;
+  width: 100%;
+}
+.countdown {
+  height: 3.2rem;
+  margin-top: 1px;
+}
+.countdown > .background {
+  width: 6.4rem;
+  height: 3.2rem;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.countdown > .background > .number {
+  margin-left: 1.4rem;
+  margin-right: 1.6rem;
+  padding-top: 0.7rem;
+  text-align: center;
+  font-size: 1.5em;
+}
+.prefix, .suffix {
+  width: 1.1rem;
+  height: 1.4rem;
+  top: 0.75rem;
+  position: absolute;
+}
+.prefix {
+  left: 2rem;
+}
+.suffix {
+  left: 3.2rem;
+}
+.reports {
+  margin-top: 1px;
+  padding: 0px 0.1rem;
+  background-color: #FFFFFF;
+}
+.struct_single {
+  height: 1.3rem;
+  padding: 0.15rem 0px;
+  border-bottom: 1px solid #D6D6D6;
+}
+.struct_single .thumb {
+  width: 1.9rem;
+  height: 1.3rem;
+  float: left;
+}
+.struct_single .thumb img{
+  width:100%;
+  height: 100%;
+  display: block;
+}
+.struct_single .detail {
+  width: 4.2rem;
+  height: 1.3rem;
+  float: right;
+}
+.struct_single .title {
+  height: 1rem;
+  font-size: 0.3rem;
+  color: #343434;
+}
+.struct_single .addtime {
+  font-size: 0.24rem;
+  color: #A0A0A0;
+}
+.struct_multiple {
+  height: 2.1rem;
+  border-bottom: 1px solid #D6D6D6;
+}
+.struct_multiple .title {
+  font-size: 0.3rem;
+  color: #343434;
+  line-height: 0.5rem;
+}
+.struct_multiple .thumbs {
+  overflow: hidden;
+}
+.struct_multiple .thumbs li {
+  width: 2rem;
+  height: 1.4rem;
+  margin-right: 0.1rem;
+  float: left;
+}
+.struct_multiple .thumbs li:last-child {
+  margin-right: 0px;
+}

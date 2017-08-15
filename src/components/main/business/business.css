@@ -1,0 +1,22 @@
+
+.business{
+  width: 6.4rem;
+  height: 100%
+}
+.business .banner{
+  width: 6.4rem;
+  height:3rem;
+  background-size: 100% 100%;
+}
+.business .rent{
+  width: 6.4rem;
+  height:3rem;
+  background-size: 100% 100%;
+  margin-top: .05rem;
+}
+.business .buy{
+  width: 6.4rem;
+  height:3rem;
+  margin-top: .04rem;
+  background-size: 100% 100%;
+}

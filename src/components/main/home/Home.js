@@ -21,6 +21,17 @@ class Home extends React.Component{
   componentWillMount(){
     this.props.dispatch(getLeasesData())
   }
+  openArticle(catid,id){
+    this.props.history.push(`/article/${catid}c${id}`)
+  }
+  slides1Click(url){
+    if(/^http:\/\/cms.5i71.org\/index.php\?m=content&c=index&a=show&catid=\d+&id=\d+/.test(url)){
+      let arr = url.split('catid=')[1].split('&id=')
+      this.props.history.push(`/article/${arr[0]}c${arr[1]}`)
+    }else{
+      window.location.href=url
+    }
+  }
   render(){
     let slides1 = this.props.initializationData.data.main.slides
     let channels = [
@@ -42,16 +53,13 @@ class Home extends React.Component{
     }
     let leasesData=this.props.leasesData.data
     let recommendsData=this.props.initializationData.data.main.recommends
-    console.log(recommendsData);
     return (
       <div className="home">
         <div className='banner'>
           <Carousel autoplay>
             {slides1.map(item=>(
-              <div key={item.id}>
-                <a href={item.url}>
-                  <img alt="img" src={item.thumb}/>
-                </a>
+              <div key={item.id} onClick={this.slides1Click.bind(this,item.url)}>
+                <img alt="img" src={item.thumb}/>
               </div>
             ))}
           </Carousel>
@@ -99,7 +107,7 @@ class Home extends React.Component{
           </div>
           <ul>
             {recommendsData.map(item=>(
-              <li key={item.id}>
+              <li key={item.id} onClick={this.openArticle.bind(this,item.catid,item.id)}>
                 <img alt='img' src={item.thumb}/>
               </li>
             ))}

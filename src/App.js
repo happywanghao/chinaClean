@@ -1,6 +1,6 @@
 import React from 'react'
-// import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+// import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 import {connect} from 'react-redux';
 import {getInitializationData} from './redux/actions/actions.js'
 import Loading from './components/loading/Loading.js'
@@ -11,6 +11,7 @@ import Business from './components/main/business/Business.js'
 import Special from './components/main/special/Special.js'
 import Search from './components/main/search/Search.js'
 import Mine from './components/main/mine/Mine.js'
+import Article from './components/main/article/Article.js'
 class App extends React.Component{
 	componentWillMount(){
 		this.props.dispatch(getInitializationData())
@@ -28,18 +29,19 @@ class App extends React.Component{
 								<Route path="/special" component={Special} />
 								<Route path="/search" component={Search} />
 								<Route path='/mine' component={Mine} />
+								<Route path='/article/:id' component={Article} />
 							</Switch>
 						</div>
-						<Footer/>
+						{this.props.showFooter ? <Footer/> : <div></div>}
 					</div>
 			</Router>
 			:
 			<Loading/>
-
 		)
 	}
 }
 const mapStateToProps=(store)=>({
-	initializationData:store.initializationData
+	initializationData:store.initializationData,
+	showFooter:store.showFooter
 })
 export default connect(mapStateToProps)(App)
