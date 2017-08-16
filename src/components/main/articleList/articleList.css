@@ -1,0 +1,55 @@
+
+.articlelist {
+  background-color: #E2E3E5;
+  width: 6.4rem;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.articlelist .struct {
+  height: 1.35rem;
+  padding: 0.2rem;
+  background-color: #FFFFFF;
+  /*background-image: url('images/article-list-bg.jpg');*/
+  background-size: auto 100%;
+  margin-bottom: 10px;
+  box-sizing: content-box;
+}
+
+.articlelist .struct .thumb {
+  width: 1.95rem;
+  height: 1.35rem;
+  float: left;
+}
+
+.articlelist .struct .thumb img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.articlelist .struct .detail {
+  width: 3.85rem;
+  height: 1.35rem;
+  float: right;
+  overflow: hidden;
+}
+
+.articlelist .struct .title {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  overflow: hidden;
+  font-size: 0.32rem;
+  color: #686868;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.articlelist .struct .description {
+  height: 0.85rem;
+  line-height: 0.425rem;
+  font-size: 0.28rem;
+  color: #BABABA;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css'
 import img1 from '../../images/header-logo.png'
-import img2 from '../../images/header-caption.png'
+// import img2 from '../../images/header-caption.png'
 import img3 from '../../images/header-call.png'
 import backImg from '../../images/back.png'
 import {connect} from 'react-redux'

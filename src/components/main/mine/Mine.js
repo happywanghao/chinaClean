@@ -9,11 +9,14 @@ class Mine extends React.Component{
     this.props.dispatch({type:'HEADERTRANSPARENT',content:true})
     this.props.dispatch({type:'SHOWBACK',content:true})
     this.props.dispatch({type:'SHOWFOOTER',content:false})
+    this.props.dispatch({type:'HEADERTITLE',content:'账户登录'})
+
   }
   componentWillUnmount(){
     this.props.dispatch({type:'HEADERTRANSPARENT',content:false})
     this.props.dispatch({type:'SHOWBACK',content:false})
     this.props.dispatch({type:'SHOWFOOTER',content:true})
+    this.props.dispatch({type:'HEADERTITLE',content:''})
   }
   render(){
     return (

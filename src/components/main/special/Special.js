@@ -10,6 +10,9 @@ class Special extends React.Component{
         return
       case 'article':
         this.props.history.push(`/article/${url}`)
+        return
+      default:
+        return
     }
   }
   render(){
@@ -28,7 +31,7 @@ class Special extends React.Component{
       <div>
         <div className="special">
           <div onClick={this.handleClick.bind(this,'banner',special.banner.url)} className="banner">
-            <img src={special.banner.thumb}/>
+            <img alt='img' src={special.banner.thumb}/>
           </div>
           <div className="countdown">
             <div className="background" style={{backgroundImage:`url(${special.countdown.thumb})`}}>

@@ -7,7 +7,7 @@ class Search extends React.Component{
     return (
       <div className="search">
         <div className="logo">
-          <img src={logoImg} />
+          <img alt='img' src={logoImg} />
         </div>
         <div style={{backgroundImage: `url(${searchToolbarBg})`}} className="toolbar">
           <div className="input"><input type="text"/></div>

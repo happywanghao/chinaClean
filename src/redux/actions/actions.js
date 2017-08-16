@@ -40,9 +40,23 @@ const getArticleContent=(id)=>(
   }
 )
 
+const getArticleList=(catid,page)=>(
+  dispatch=>{
+    axios.get(`http://cms.5i71.org/invoke.php/business/content?do=list&catid=${catid}&page=${page}`)
+    .then(data=>{
+      if(data.data.contents){
+        dispatch({type:'NOWARTICLELISTCONTENT',content:data.data})
+      }else{
+        dispatch({type:'ARTICLELISTISTOTHEEND',content:true})
+      }
+    })
+    .catch(err=>{alert(err)})
+  }
+)
 
 export {
   getInitializationData,
   getLeasesData,
   getArticleContent,
+  getArticleList
 };

@@ -32,17 +32,21 @@ class Home extends React.Component{
       window.location.href=url
     }
   }
+  channelClick(catid,name){
+    this.props.history.push(`/articlelist/${catid}`)
+    this.props.dispatch({type:'HEADERTITLE',content:name})
+  }
   render(){
     let slides1 = this.props.initializationData.data.main.slides
     let channels = [
-        {name:'资讯',id:'1',img:channelsImg1},
-        {name:'企业',id:'2',img:channelsImg2},
-        {name:'产品',id:'3',img:channelsImg3},
-        {name:'文档',id:'4',img:channelsImg4},
-        {name:'视频',id:'5',img:channelsImg5},
-        {name:'展会',id:'6',img:channelsImg6},
-        {name:'杂志',id:'7',img:channelsImg7},
-        {name:'商务',id:'8',img:channelsImg8}
+        {name:'资讯',catid:'1',img:channelsImg1},
+        {name:'企业',catid:'2',img:channelsImg2},
+        {name:'产品',catid:'3',img:channelsImg3},
+        {name:'文档',catid:'4',img:channelsImg4},
+        {name:'视频',catid:'5',img:channelsImg5},
+        {name:'展会',catid:'6',img:channelsImg6},
+        {name:'杂志',catid:'7',img:channelsImg7},
+        {name:'商务',catid:'8',img:channelsImg8}
       ]
     let hots = this.props.initializationData.data.main.hots
     let hotCarouselSettings={
@@ -67,7 +71,7 @@ class Home extends React.Component{
         <div className="channels">
           <ul>
             {channels.map(item => (
-              <li key={item.id} style={{backgroundImage:`url(${item.img})`}}>
+              <li onClick={this.channelClick.bind(this,item.catid,item.name)} key={item.catid} style={{backgroundImage:`url(${item.img})`}}>
                 <span>{item.name}</span>
               </li>
             ))}

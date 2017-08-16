@@ -62,6 +62,31 @@ function headerTransparent(state=false,action){
   }
 }
 
+function nowArticleList(state='',action){
+  switch(action.type){
+    case 'NOWARTICLELISTCONTENT':
+      if(!state){
+        return action.content
+      }else if(!action.content.contents){
+        return state
+      }else if(state.contents[0].catid===action.content.contents[0].catid){
+        action.content.contents=state.contents.concat(action.content.contents)
+      }
+      return action.content
+    default:
+      return state
+  }
+}
+
+function articleListToTheEnd(state='',action){
+  switch(action.type){
+    case 'ARTICLELISTISTOTHEEND':
+      return action.content
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
   initializationData,
   leasesData,
@@ -69,5 +94,7 @@ export default combineReducers({
   nowArticleContent,
   showBack,
   headerTitle,
-  headerTransparent
+  headerTransparent,
+  nowArticleList,
+  articleListToTheEnd
 })

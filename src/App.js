@@ -1,6 +1,6 @@
 import React from 'react'
 // import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import {connect} from 'react-redux';
 import {getInitializationData} from './redux/actions/actions.js'
 import Loading from './components/loading/Loading.js'
@@ -12,6 +12,7 @@ import Special from './components/main/special/Special.js'
 import Search from './components/main/search/Search.js'
 import Mine from './components/main/mine/Mine.js'
 import Article from './components/main/article/Article.js'
+import ArticleList from './components/main/articleList/ArticleList.js'
 class App extends React.Component{
 	componentWillMount(){
 		this.props.dispatch(getInitializationData())
@@ -30,6 +31,7 @@ class App extends React.Component{
 								<Route path="/search" component={Search} />
 								<Route path='/mine' component={Mine} />
 								<Route path='/article/:id' component={Article} />
+								<Route path='/articlelist/:catid' component={ArticleList}/>
 							</Switch>
 						</div>
 						{this.props.showFooter ? <Footer/> : <div></div>}
