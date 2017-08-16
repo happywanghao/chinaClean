@@ -87,6 +87,15 @@ function articleListToTheEnd(state='',action){
   }
 }
 
+function nowGoodsDetails(state='',action){
+  switch(action.type){
+    case 'NOWGOODSDETAILS':
+      return action.content
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
   initializationData,
   leasesData,
@@ -96,5 +105,6 @@ export default combineReducers({
   headerTitle,
   headerTransparent,
   nowArticleList,
-  articleListToTheEnd
+  articleListToTheEnd,
+  nowGoodsDetails
 })

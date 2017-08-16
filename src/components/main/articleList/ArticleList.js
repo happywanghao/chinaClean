@@ -7,7 +7,6 @@ class ArticleList extends React.Component{
   state={page:1,loading:false}
   componentWillMount(){
     this.catid=this.props.match.params.catid
-    console.log(this.catid)
     this.props.dispatch(getArticleList(this.catid,this.state.page))
     this.props.dispatch({type:"SHOWFOOTER",content:false})
     this.props.dispatch({type:"SHOWBACK",content:true})

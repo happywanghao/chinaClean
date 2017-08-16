@@ -54,9 +54,21 @@ const getArticleList=(catid,page)=>(
   }
 )
 
+const getGoodsDetails=(id)=>(
+  dispatch=>{
+    axios.get(`http://business.5i71.org/rest.php?r=product/item&id=${id}`)
+    .then(data=>{
+      dispatch({type:"NOWGOODSDETAILS",content:data.data.data})
+    })
+    .catch(err=>{alert(err)})
+  }
+)
+
+
 export {
   getInitializationData,
   getLeasesData,
   getArticleContent,
-  getArticleList
+  getArticleList,
+  getGoodsDetails
 };

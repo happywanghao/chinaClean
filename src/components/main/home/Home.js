@@ -36,6 +36,9 @@ class Home extends React.Component{
     this.props.history.push(`/articlelist/${catid}`)
     this.props.dispatch({type:'HEADERTITLE',content:name})
   }
+  leasesClick(id){
+    this.props.history.push(`/goodsdetails/${id}`)
+  }
   render(){
     let slides1 = this.props.initializationData.data.main.slides
     let channels = [
@@ -78,10 +81,10 @@ class Home extends React.Component{
           </ul>
         </div>
         <div className="hots clearfix">
-          <div className="caption" style={{backgroundImage: `url(${captionImg})`}}></div>
+          <div className="caption" onClick={this.channelClick.bind(this,24,'中清快报')} style={{backgroundImage: `url(${captionImg})`}}></div>
           <Carousel {...hotCarouselSettings}>
             {hots.map(item=>(
-              <div key={item.id} style={{backgroundImage:`url(${hotsImg})`}}>
+              <div key={item.id} onClick={this.openArticle.bind(this,item.catid,item.id)} style={{backgroundImage:`url(${hotsImg})`}}>
                 {item.title}
               </div>
             ))}
@@ -91,11 +94,11 @@ class Home extends React.Component{
           leasesData ?
           <div className="leases">
             <div className="caption" style={{backgroundImage:`url(${leasesCaptionImg})`}}>
-              <span>更多...</span>
+              <span onClick={()=>{this.props.history.push('/business')}}>更多...</span>
             </div>
             <ul>
               {leasesData.data.list.map(item=>(
-                <li key={item.id}>
+                <li key={item.id} onClick={this.leasesClick.bind(this,item.id)}>
                   <div className="thumb"><img alt='img' src={`http://business.5i71.org/${item.thumb}`}/></div>
                   <div className="title">{item.name}</div>
                 </li>
@@ -107,7 +110,7 @@ class Home extends React.Component{
         }
         <div className="recommends">
           <div className="caption" style={{backgroundImage:`url(${recommendsCaptionImg})`}}>
-            <span>更多...</span>
+            <span onClick={this.channelClick.bind(this,18,'每日推荐')}>更多...</span>
           </div>
           <ul>
             {recommendsData.map(item=>(
