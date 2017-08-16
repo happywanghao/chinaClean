@@ -53,11 +53,21 @@ function headerTitle(state='中清商务',action){
   }
 }
 
+function headerTransparent(state=false,action){
+  switch(action.type){
+    case 'HEADERTRANSPARENT':
+      return action.content
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
   initializationData,
   leasesData,
   showFooter,
   nowArticleContent,
   showBack,
-  headerTitle
+  headerTitle,
+  headerTransparent
 })

@@ -1,0 +1,69 @@
+
+  .mine{
+    background-color: #f5f5f5;
+    font-size: .35rem;
+    color: #333;
+    font-family: "Microsoft YaHei", Arial;
+      width: 6.4rem;
+
+      position: relative;
+  }
+  .mine .header{
+      height:3.58rem;
+      background-size: 100% auto;
+      position: relative;
+  }
+  .mine .header img{
+      width:100%;
+  }
+  .mine .user{
+      height:1rem;
+      border-bottom: solid 1px #ccc;
+      line-height: 1rem;
+      background: white;
+  }
+  .mine .user .name{
+      display: inline-block;
+      width:2rem;
+      text-align: center;
+      float: left;
+  }
+  .mine .user input:focus{
+      outline: none;
+  }
+  .mine .pwd_span{
+      width:1rem;
+      margin-left: 1rem;
+      float: left;
+  }
+  .mine button{
+      width:90%;
+      height:1rem;
+      font-size: .4rem;
+      color: white;
+      background: #0574bb;
+      display: block;
+      margin:.3rem auto;
+      border-radius: .05rem;
+      font-family: "Microsoft YaHei", Arial;
+  }
+  .mine .reg{
+      width:87%;
+      height:.5rem;
+      margin:-.3rem auto;
+  }
+  .mine .reg a{
+      font-size: .25rem;
+  }
+  .mine .reg .register{
+      color: #333;
+  }
+  .mine .reg .password-retrieval{
+      float: right;
+      color: #2091dc;
+      line-height: .5rem;
+  }
+  .mine input{
+      width:3.5rem;
+      font-size: .35rem;
+  }

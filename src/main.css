@@ -3,6 +3,11 @@ html,body,#root{
   width: 6.4rem;
   height: 100%;
 }
+#root{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
 #app {
   width: 6.4rem;
   height: 100%;
@@ -20,4 +25,13 @@ li{
 	flex-grow: 1;
 	overflow: auto;
 	display: flex;
+}
+input {
+	border:none;
+	outline: none;
+	background: none;
+}
+button{
+	
+	outline: none;
 }
