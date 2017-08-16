@@ -16,8 +16,13 @@ class GoodsDetails extends React.Component{
     this.props.dispatch({type:'HEADERTITLE',content:''})
   }
   render(){
+    console.log(this.props.nowGoodsDetails)
     return (
-      <div>sss</div>
+      this.props.nowGoodsDetails&&this.props.match.params.id===this.props.nowGoodsDetails.item.id ?
+      <div>
+        {this.props.nowGoodsDetails.item.content}
+      </div>
+      :<Loading/>
     )
   }
 }
