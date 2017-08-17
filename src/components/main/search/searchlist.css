@@ -1,0 +1,53 @@
+
+  .searchList {
+    width: 6.4rem;
+    flex-grow: 1;
+    overflow: auto;
+  }
+
+  .searchList .struct {
+    height: 1.15rem;
+    background-color: #FFFFFF;
+  }
+
+  .searchList .struct .thumb {
+    width: 1.38rem;
+    height: 1.15rem;
+    background-size: 100%;
+    float: left;
+  }
+
+  .searchList .struct .thumb img{
+    display: block;
+    width: 100%;
+  }
+
+  .searchList .struct .detail {
+    width: 5.02rem;
+    height: 1.15rem;
+    padding-top: 0.25rem;
+    border-bottom: 1px solid #E2E3E5;
+    box-sizing: border-box;
+    float: right;
+  }
+
+  .searchList .struct .title {
+    font-size: 0.28rem;
+    line-height: 0.4rem;
+    width: 100%;
+    color: #2D2D2D;
+    white-space:nowrap;
+    overflow: hidden;
+    padding-right: 0.2rem;
+    text-overflow:ellipsis;
+  }
+
+  .searchList .struct .description {
+    font-size: 0.24rem;
+    color: #6f6f6f;
+    width: 100%;
+    white-space:nowrap;
+    overflow: hidden;
+    padding-right: 0.2rem;
+    text-overflow:ellipsis;
+  }

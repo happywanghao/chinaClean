@@ -1,0 +1,33 @@
+.goodsDetails {
+  width: 100%;
+}
+.goodsDetails .images{
+  width: 100%;
+}
+.goodsDetails .images img{
+  display: block;
+  margin: 0 auto;
+}
+.goodsDetails h2{
+  text-align: center;
+  font-size: 0.5rem;
+}
+.goodsDetails p{
+  font-size: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.goodsDetails .price{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height:0.9rem;
+  line-height:0.9rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.goodsDetails .price em{
+  color:red;
+  font-size: 0.5rem;
+}
+.goodsDetails .price .touse{
+  color:red;
+}

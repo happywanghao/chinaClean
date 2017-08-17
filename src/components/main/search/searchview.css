@@ -1,0 +1,27 @@
+
+
+
+.searchview {
+  font-size: 0.3rem;
+  width: 6.4rem;
+  padding: 0.3rem;
+}
+
+
+.searchview h1 {
+  font-size: 0.4rem;
+}
+
+.searchview span {
+  font-size: 0.24rem;
+  margin: 0.10rem;
+}
+
+.searchview p {
+  font-size: 0.3rem;
+  line-height: 160%;
+}
+.searchview img {
+  width: 100% !important;
+  height: auto !important;
+}

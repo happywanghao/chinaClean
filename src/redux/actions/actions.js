@@ -1,4 +1,5 @@
 import axios from 'axios';
+//预加载
 const getInitializationData=()=>(
   dispatch=>{
     if(localStorage.initializationData){
@@ -12,7 +13,7 @@ const getInitializationData=()=>(
     .catch(err=>{alert(err)})
   }
 )
-
+//获取首页租赁商品信息
 const getLeasesData=()=>(
   dispatch=>{
     if(localStorage.leasesData){
@@ -26,7 +27,7 @@ const getLeasesData=()=>(
     .catch(err=>{alert(err)})
   }
 )
-
+//获取文章详情
 const getArticleContent=(id)=>(
   dispatch=>{
     let arr=id.split('c')
@@ -39,7 +40,7 @@ const getArticleContent=(id)=>(
     .catch(err=>{alert(err)})
   }
 )
-
+//获取文章列表
 const getArticleList=(catid,page)=>(
   dispatch=>{
     axios.get(`http://cms.5i71.org/invoke.php/business/content?do=list&catid=${catid}&page=${page}`)
@@ -53,12 +54,39 @@ const getArticleList=(catid,page)=>(
     .catch(err=>{alert(err)})
   }
 )
-
+//获取商品详情
 const getGoodsDetails=(id)=>(
   dispatch=>{
     axios.get(`http://business.5i71.org/rest.php?r=product/item&id=${id}`)
     .then(data=>{
       dispatch({type:"NOWGOODSDETAILS",content:data.data.data})
+    })
+    .catch(err=>{alert(err)})
+  }
+)
+//获取搜索列表
+const getSearchList=(val,page=1)=>(
+  dispatch=>{
+    axios.get(`http://www.5i71.com/search.aspx?act=list&key=${val}&page=${page}&v=2`)
+    .then(data=>{
+      if(data.data.constructor === String){
+        data.data=JSON.parse(data.data.replace(/[\r\n\f\t\v]/g,''))
+      }
+      if(data.data.searchs){
+        dispatch({type:"NOWSEARCHLIST",content:data.data})
+      }else{
+        dispatch({type:'ARTICLELISTISTOTHEEND',content:true})
+      }
+    })
+    .catch(err=>{alert(err)})
+  }
+)
+//获取搜索文章详情
+const getSearchviewContent=(id)=>(
+  dispatch=>{
+    axios.get(`http://www.5i71.com/search.aspx?act=info&id=${id}`)
+    .then(data=>{
+      dispatch({type:"SEARCHVIEWCONTENT",content:data.data})
     })
     .catch(err=>{alert(err)})
   }
@@ -70,5 +98,7 @@ export {
   getLeasesData,
   getArticleContent,
   getArticleList,
-  getGoodsDetails
+  getGoodsDetails,
+  getSearchList,
+  getSearchviewContent
 };

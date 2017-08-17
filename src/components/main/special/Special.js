@@ -17,7 +17,6 @@ class Special extends React.Component{
   }
   render(){
     let special = this.props.initializationData.data.special
-    console.log(special.reports);
     let date = special.countdown.description.replace(/-/g, "/");
     let endDate = new Date(Date.parse(date))
     let curDate = new Date()

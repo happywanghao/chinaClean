@@ -1,22 +1,26 @@
 
 .business{
   width: 6.4rem;
-  height: 100%
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
 }
 .business .banner{
   width: 6.4rem;
+  flex-shrink: 0;
   height:3rem;
-  background-size: 100% 100%;
+  background-size: 100%;
 }
-.business .rent{
+.business .buy,.business .rent{
   width: 6.4rem;
-  height:3rem;
-  background-size: 100% 100%;
-  margin-top: .05rem;
+  flex-grow: 1;
+  background-size:100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .business .buy{
-  width: 6.4rem;
-  height:3rem;
-  margin-top: .04rem;
-  background-size: 100% 100%;
+  background-color: #3ab16e;
+}
+.business .rent{
+  background-color: #1eb9ed;
 }

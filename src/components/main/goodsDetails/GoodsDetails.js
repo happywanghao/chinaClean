@@ -16,11 +16,16 @@ class GoodsDetails extends React.Component{
     this.props.dispatch({type:'HEADERTITLE',content:''})
   }
   render(){
-    console.log(this.props.nowGoodsDetails)
+    let item=this.props.nowGoodsDetails.item
     return (
       this.props.nowGoodsDetails&&this.props.match.params.id===this.props.nowGoodsDetails.item.id ?
-      <div>
-        {this.props.nowGoodsDetails.item.content}
+      <div className="goodsDetails">
+        <div className="images">
+          <img alt="img" src={`http://business.5i71.org/${item.thumb}`}/>
+        </div>
+        <h2 className="name">{item.name}</h2>
+        <p className="price"><span>￥<em>{item.price}</em>/日均</span><span className='touse'>我要租用&gt;&gt;</span></p>
+        <p className="introduce">{item.content}</p>
       </div>
       :<Loading/>
     )

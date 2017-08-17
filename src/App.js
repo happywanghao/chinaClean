@@ -14,6 +14,9 @@ import Mine from './components/main/mine/Mine.js'
 import Article from './components/main/article/Article.js'
 import ArticleList from './components/main/articleList/ArticleList.js'
 import GoodsDetails from './components/main/goodsDetails/GoodsDetails.js'
+import Category from './components/main/category/Category.js'
+import SearchList from './components/main/search/SearchList.js'
+import Searchview from './components/main/search/Searchview.js'
 class App extends React.Component{
 	componentWillMount(){
 		this.props.dispatch(getInitializationData())
@@ -34,6 +37,9 @@ class App extends React.Component{
 								<Route path='/article/:id' component={Article} />
 								<Route path='/articlelist/:catid' component={ArticleList}/>
 								<Route path='/goodsdetails/:id' component={GoodsDetails}/>
+								<Route path='/category/:type' component={Category}/>
+								<Route path='/searchlist/:val' component={SearchList}/>
+								<Route path='/searchview/:id' component={Searchview}/>
 							</Switch>
 						</div>
 						{this.props.showFooter ? <Footer/> : <div></div>}
